@@ -25,6 +25,12 @@
         <forminput>
      <div slot="formdetails"></div>
         </forminput>
+        <keep-alive>
+            <component :is="currentView">
+
+            </component>
+        </keep-alive>
+
     </div>
 </template>
 
@@ -34,12 +40,13 @@
     import images from './images'
     import category from './category'
     import forminput from './forminput'
+    import selection from './selection'
 
     export default {
 
         data() {
             return {
-
+currentView:'selection',
             }
         },
 
@@ -53,6 +60,7 @@
             images,
             category,
             forminput,
+            selection,
         },
 
 
