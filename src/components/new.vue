@@ -30,6 +30,12 @@
 
             </component>
         </keep-alive>
+        <requirement>
+
+        </requirement>
+        <footercontent :msg="message">
+
+        </footercontent>
 
     </div>
 </template>
@@ -41,6 +47,8 @@
     import category from './category'
     import forminput from './forminput'
     import selection from './selection'
+    import requirement from './requirement'
+    import footercontent from './footercontent'
 
     export default {
 
@@ -61,6 +69,8 @@ currentView:'selection',
             category,
             forminput,
             selection,
+            requirement,
+            footercontent,
         },
 
 
