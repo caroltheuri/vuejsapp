@@ -33,7 +33,7 @@
         <requirement>
 
         </requirement>
-        <footercontent :msg="message">
+        <footercontent message="">
 
         </footercontent>
 
@@ -55,6 +55,7 @@
         data() {
             return {
 currentView:'selection',
+                message:'',
             }
         },
 

@@ -5,9 +5,10 @@
                 <div class="large-1 cell"></div>
                 <div class="auto cell" >
                     <br> <p>Kindly give us a feedback</p> <br>
-                    <input :value="msg" @keyup.enter="takemsg"> <br>
+                    <input @keyup.enter="response()"> <br>
                     <span>{{message}}</span>
-                    <span>{{msg}}</span>
+                    <!--<span>{{msg}}</span>-->
+                    <!--:value="msg" @keyup.enter="takemsg"-->
                 </div>
 
 
@@ -20,16 +21,19 @@
 
 export default{
     name: 'footercontent',
-    props:[msg],
+    props:['message'],
     data(){
         return{
-            message:'',
+
 //            handleMessage(message){
 //                alert('handling' + message);
 //            },
         }
     },
     methods:{
+        response(){
+          alert("thankyou we will put your feedback into consideration")
+        },
         takemsg(){
             this.$dispatch('custommsg',this.message);
         },
