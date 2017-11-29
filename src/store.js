@@ -81,7 +81,21 @@ export const store = new Vuex.Store({
             return investDiscounts;
 
         }
-    }
-//
+    },
+//mutations
+    mutations:{
+     changeCurrency:state=>{
+      state.rentHouses.forEach(house=>{
+          house.Price=`$ ${(house.Price)/103}`;
+      })
+         state.ownHouses.forEach(house=>{
+             house.Price=`$ ${(house.Price)/103}`;
+         })
+         state.investHouses.forEach(house=>{
+             house.Price=`$ ${(house.Price)/103}`;
+         })
+         return changeCurrency;
+     },
+    },
 
 });

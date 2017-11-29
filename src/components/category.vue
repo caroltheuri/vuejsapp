@@ -12,7 +12,7 @@
                         <li>{{ house.Price }}</li>
 
                     </ul>
-                    <button  @click="changeChoice()">click me to change</button>
+
                 </div>
                 <div class="auto cell">
                     <h2>Ownership</h2>
@@ -30,8 +30,9 @@
                         <li>{{ house.Price }}</li>
                     </ul>
                 </div>
-            </div>
 
+            </div>
+            <button id="btn" type="button success" @click="changeCurrency">Click to change price to dollars </button>
         </div>
     </div>
 </template>
@@ -58,6 +59,11 @@
             }
 
         },
+        methods:{
+          changeCurrency:function(){
+           this.$store.commit('changeCurrency');
+          },
+        },
         name: 'category',
         data (){
             return{
@@ -69,5 +75,11 @@
 <style scoped>
     #categories{
         background-color: cadetblue;
+    }
+    #btn{
+        margin-left: 570px;
+        padding: 10px;
+        background-color: #d7ecfa;
+        margin-bottom: 10px;
     }
 </style>
