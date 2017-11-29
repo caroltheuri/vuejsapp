@@ -6,14 +6,14 @@ export const store = new Vuex.Store({
     state: {
         rentHouses: [
             {
-                name: 'alma',
-                location: 'westlands',
-                Price:'50454534 shillings'
+                name: 'Alma',
+                location: 'Westlands',
+                Price:50454534
             },
             {
                 name: 'Juja apartments',
                 location: 'Juja',
-                Price:'2 million'
+                Price:2000000
             }
         ],
 
@@ -21,26 +21,67 @@ export const store = new Vuex.Store({
             {
                 name:'Thika gardens',
                 location:'Thika ',
-                Price:'15000000 shillings'
+                Price:15000000
             },
             {
-                name:'lavington heights',
+                name:'Lavington heights',
                 location:'Lavington',
-                Price:'20500000 shillings'
+                Price:20500000
             },
         ],
 
         investHouses: [
             {
-                name:'kahawa condos',
-                location:'kahawa west',
-                Price:'500000 shillings'
+                name:'Kahawa condos',
+                location:'Kahawa west',
+                Price:500000
             },
             {
                 name:'Riara mansions',
                 location:'Riara roadside',
-                Price:'800000 shillings'
+                Price:800000
             },
         ],
+    },
+    //getters object add functionalities to the object
+    getters:{
+        rentDiscounts:state =>{
+            var rentDiscounts =state.rentHouses.map(house =>{
+             return{
+                 name:`Name: ${house.name}`,
+                 location:`Location: ${house.location}`,
+                 Price:`Price: ${house.Price} with a discount of 15% amounting to: ${house.Price*0.85} after discount`,
+             }
+
+         });
+   return rentDiscounts;
+
+        },
+        ownDiscounts:state =>{
+            var ownDiscounts =state.ownHouses.map(house =>{
+                return{
+                    name:`Name: ${house.name}`,
+                    location:`Location: ${house.location}`,
+                    Price:`Price: ${house.Price} with a discount of 15% amounting to: ${house.Price*0.85} after discount`,
+                }
+
+            });
+            return ownDiscounts;
+
+        },
+        investDiscounts:state =>{
+            var investDiscounts =state.investHouses.map(house =>{
+                return{
+                    name:`Name: ${house.name}`,
+                    location:`Location: ${house.location}`,
+                    Price:`Price: ${house.Price} with a discount of 15% amounting to: ${house.Price*0.85} after discount`,
+                }
+
+            });
+            return investDiscounts;
+
+        }
     }
+//
+
 });
