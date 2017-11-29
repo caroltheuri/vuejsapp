@@ -11,7 +11,7 @@
 
             </div>
         </maincontent>
-        <images>
+        <images :theme="theme">
             <div slot="gallery">
 
             </div>
@@ -22,7 +22,7 @@
 
         </category>
         <hr>
-        <forminput>
+        <forminput :theme="theme">
      <div slot="formdetails"></div>
         </forminput>
         <keep-alive>
@@ -56,6 +56,7 @@
             return {
 currentView:'selection',
                 message:'',
+                theme:'HS',
             }
         },
 

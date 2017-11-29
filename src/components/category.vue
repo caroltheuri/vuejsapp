@@ -37,47 +37,21 @@
 </template>
 <script>
     export default{
+        computed:{
+       rentHouses(){
+           return this.$store.state.rentHouses
+       },
+            ownHouses(){
+                return this.$store.state.ownHouses
+            },
+            investHouses(){
+                return this.$store.state.investHouses
+            }
+        },
         name: 'category',
         data (){
             return{
-                rentHouses: [
-                    {
-                        name: 'alma',
-                        location: 'westlands',
-                        Price:'50454534 shillings'
-                    },
-                    {
-                        name: 'Juja apartments',
-                        location: 'Juja',
-                        Price:'2 million'
-                    }
-                ],
 
-                ownHouses: [
-                    {
-                        name:'Thika gardens',
-                        location:'Thika ',
-                        Price:'15000000 shillings'
-                    },
-                    {
-                        name:'lavington heights',
-                        location:'Lavington',
-                        Price:'20500000 shillings'
-                    },
-                ],
-
-                investHouses: [
-                    {
-                        name:'kahawa condos',
-                        location:'kahawa west',
-                        Price:'500000 shillings'
-                    },
-                    {
-                        name:'Riara mansions',
-                        location:'Riara roadside',
-                        Price:'800000 shillings'
-                    },
-                ],
             }
         }
     }

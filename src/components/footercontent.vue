@@ -7,8 +7,6 @@
                     <br> <p>Kindly give us a feedback</p> <br>
                     <input @keyup.enter="response()"> <br>
                     <span>{{message}}</span>
-                    <!--<span>{{msg}}</span>-->
-                    <!--:value="msg" @keyup.enter="takemsg"-->
                 </div>
 
 
@@ -22,12 +20,11 @@
 export default{
     name: 'footercontent',
     props:['message'],
+
     data(){
         return{
 
-//            handleMessage(message){
-//                alert('handling' + message);
-//            },
+
         }
     },
     methods:{

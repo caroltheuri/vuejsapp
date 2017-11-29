@@ -16,6 +16,9 @@
                     <img src="../assets/rent.jpeg">
                     <p>This house is for investment. (3)</p>
                 </div>
+                <div class="auto cell" id="theme">
+                    <p>{{theme}}</p>
+                </div>
             </div>
 
         </div>
@@ -23,7 +26,8 @@
 </template>
 <script>
     export default{
-name:'images'
+        name:'images',
+        props:['theme'],
     }
 </script>
 <style scoped>
