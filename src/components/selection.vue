@@ -3,12 +3,22 @@
         <div class="grid-x grid-margin-x">
             <div class="large-1 cell"></div>
             <div class="auto cell">
-                <select v-model="selected" id="options">
-                    <option v-for="choice in choices" v-bind:value="choice.value">
-                        {{choice.number}}
-                    </option>
-                </select>
+                <el-select v-model="value" id="options">
+                    <el-option v-for="choice in choices"
+                               :key="choice.value"
+                               :label="choice.label"
+                               :value="choice.value"
+                    >
+                    </el-option>
+                </el-select>
     </div>
+            <div class="auto cell">
+                <el-date-picker size="large"
+                        v-model="value1"
+                        type="date"
+                        placeholder="Pick a day">
+                </el-date-picker>
+            </div>
         </div>
     </div>
 </template>
@@ -18,22 +28,23 @@
         data(){
             return{
                 display: true,
-                selected: "1",
                 choices: [{
-                    number: 'Rent',
-                    value: '1'
+                    value: 'Rent',
+                    label: 'Rent'
 
                 },
                     {
-                        number: 'Ownership',
-                        value: '2'
+                        value: 'Ownership',
+                        label: 'Ownership'
                     },
                     {
-                        number: 'Investment',
-                        value: '3'
-                    }
-                ]
+                        value: 'Investment',
+                        label: 'Investment'
+                    }],
+                    value:'',
+                value1: '',
             }
         }
     }
 </script>
+<style></style>
