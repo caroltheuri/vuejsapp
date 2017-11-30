@@ -32,7 +32,9 @@
                 </div>
 
             </div>
+            <el-tooltip class="item" effect="dark" content="converts kenyan shillings to dollars" placement="top-start">
             <el-button id="btn" type="success" @click="changeCurrency" round>Click to change price to dollars </el-button>
+            </el-tooltip>
         </div>
     </div>
 </template>
