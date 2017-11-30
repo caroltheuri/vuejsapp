@@ -32,7 +32,7 @@
                 </div>
 
             </div>
-            <button id="btn" type="button success" @click="changeCurrency">Click to change price to dollars </button>
+            <el-button id="btn" type="success" @click="changeCurrency" round>Click to change price to dollars </el-button>
         </div>
     </div>
 </template>
@@ -77,9 +77,8 @@
         background-color: cadetblue;
     }
     #btn{
-        margin-left: 570px;
+        margin-left: 600px;
         padding: 10px;
-        background-color: #d7ecfa;
         margin-bottom: 10px;
     }
 </style>

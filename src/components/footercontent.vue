@@ -5,7 +5,7 @@
                 <div class="large-1 cell"></div>
                 <div class="auto cell" >
                     <br> <p>Kindly give us a feedback</p> <br>
-                    <input @keyup.enter="response()"> <br>
+                    <el-input type="textarea" @keyup.enter="response()"  :autosize="{ minRows: 2, maxRows: 3}"> </el-input><br>
                     <span>{{message}}</span>
                 </div>
 
@@ -44,7 +44,9 @@ export default{
 </script>
 <style>
    #feedback{
+       font-size: 20px;
        background-color: cadetblue;
-       height: 150px;
+       height: 300px;
+       padding: 30px;
    }
 </style>

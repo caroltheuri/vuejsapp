@@ -6,14 +6,14 @@
                 <div class="large-1 cell"></div>
                 <div class="auto cell" >
                     <label>Enter your full name:
-                        <input type="text" v-model="message" placeholder="Enter your full name">Hey {{greeting}}
+                        <el-input type="text" v-model="message" placeholder="Enter your full name" prefix-icon="el-icon-edit">Hey {{greeting}}</el-input>
 
                     </label>
 
                 </div>
                 <div class="auto cell">
                     <label>Enter your phone number:
-                        <input type="number" v-model.number="phonenumber" placeholder="Enter your phone number" v-on:keyup.enter="confirm">
+                        <el-input value="number" v-model.number="phonenumber" placeholder="Enter your phone number" v-on:keyup.enter="confirm" prefix-icon="el-icon-phone"></el-input>
                     </label>
                 </div>
                 <div class="auto cell" id="theme">

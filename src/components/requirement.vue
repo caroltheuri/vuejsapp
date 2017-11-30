@@ -1,27 +1,27 @@
 <template>
 <div>
-    <div class="grid-x grid-margin-x">
-        <div class="large-1 cell"></div>
-        <div class="auto cell" >
+    <el-row type="flex" class="row-bg" justify="space-around">
+        <el-col :span="6">
     <p v-show="ok">{{ok}}</p>
-    <input type="radio"  value="You must have savings of more than a 100,000 shillings" v-model="picked">
-    <label>Employment</label>
-    <br>
-    <input type="radio"  value="You must have savings of more than a 400,000 shillings" v-model="picked" >
-    <label >Family business</label><br>
-    <input type="radio" value="You must have savings of more than a 700,000 shillings" v-model="picked">
-    <label>Self-employed</label>
-    <br>
-            <div class="auto cell" >
-    <span>{{picked}}</span>
-            </div>
-            <br>
-            <div class="auto cell" >
-                <a class="button primary" @click="subt()">Submit</a>
-            </div>
+            <el-radio label="You must have savings of more than a 100,000 shillings" v-model="radio" border>Employment</el-radio>
+    <br><br>
+            <el-radio label="You must have savings of more than a 400,000 shillings" v-model="radio" border>Family business</el-radio>
+    <br><br>
+            <el-radio label="You must have savings of more than a 700,000 shillings" v-model="radio" border>Self-employed</el-radio>
+            <br><br>
+            <el-button type="success" @click="subt()" round>Submit</el-button>
+
+        </el-col>
+        <el-col :span="6">
+    <span id="cash">{{radio}}</span>
+           </el-col>
+        <br>
+
+
+    </el-row>
 </div>
-</div>
-</div>
+
+
 
 </template>
 <script>
@@ -31,7 +31,7 @@
                 return {
                     ok:'What is your source of income',
 
-                    picked:[
+                    radio:[
                     ],
                 }
             },
@@ -44,5 +44,8 @@
 
 </script>
 <style>
-
+#cash{
+    font-size: 40px;
+    color: lightcoral;
+}
 </style>

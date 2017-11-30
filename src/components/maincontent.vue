@@ -39,8 +39,11 @@ export default{
 #about{
     text-align: center;
     color: cadetblue;
+    font-family:Hiragino Sans GB;
 }
     #purposes{
         color:black;
+    }
+    h2{
     }
 </style>
